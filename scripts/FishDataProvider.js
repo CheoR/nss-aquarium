@@ -20,4 +20,9 @@ const fishCollection = [
         diet: "Plankton",
         img: "https://media.istockphoto.com/photos/paracanthurus-hepatus-picture-id1287882551?b=1&k=6&m=1287882551&s=170667a&w=0&h=w9iVexUnTLLMCzWrFGcL4pGMERJxrtnWkoN3Od3LTqY="
     },
-]
+];
+
+
+export const useFish = () => {
+    return fishCollection.slice();
+}
