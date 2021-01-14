@@ -25,7 +25,62 @@ const fishCollection = [
     },
 ];
 
+const testFiltersFishCollection = [
+    {length: 7},
+    {length: 21},
+    {length: 6},
+    {length: 9},
+    {length: 6},
+    {length: 9},
+    {length: 23},
+    {length: 2},
+    {length: 14},
+    {length: 6},
+    {length: 13},
+    {length: 23},
+    {length: 1},
+    {length: 13},
+    {length: 18},
+    {length: 19},
+    {length: 20},
+    {length: 20},
+    {length: 22},
+    {length: 1},
+    {length: 2},
+    {length: 17},
+    {length: 10},
+    {length: 24},
+    {length: 19},
+    {length: 12},
+];
 
-export const useFish = () => {
+
+const useFish = () => {
     return fishCollection.slice();
 }
+
+const mostHolyFish = () => {
+    const holyFish = testFiltersFishCollection.filter((fish) => {
+        return fish.length % 3 === 0;
+    });
+
+    return holyFish.map((fish) => fish.length);
+}
+
+const soliderFish = () => {
+    const soliderFishes = testFiltersFishCollection.filter((fish) => {
+        return fish.length % 5 === 0;
+    });
+
+    return soliderFishes.map((fish) => fish.length);
+}
+
+const nonHolyFish = () => {
+    const nonHolyFishes = testFiltersFishCollection.filter((fish) => {
+        return fish.length % 5 !== 0 && fish.length % 3 !== 0;
+    });
+
+    return nonHolyFishes.map((fish) => fish.length);
+}
+
+export { useFish, mostHolyFish, soliderFish, nonHolyFish }

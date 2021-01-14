@@ -4,13 +4,15 @@ import { FishList } from "./fish/FishList.js";
 import { TipList } from "./tips/TipList.js"
 import { useLocation } from "./locations/LocationDataProvider.js"
 import { LocationList } from "./locations/LocationList.js"
-import { useQuote } from "./quotes/QuotesDataProvider.js"
+// import { useQuote } from "./quotes/QuotesDataProvider.js"
 import { QuoteList } from "./quotes/QuoteList.js"
 
-const quotes = useQuote();
-for(const quote of quotes) {
-    console.log(quote);
-}
+import { mostHolyFish, soliderFish, nonHolyFish } from "./fish/FishDataProvider.js"
+
+// const quotes = useQuote();
+// for(const quote of quotes) {
+//     console.log(quote);
+// }
 
 // const allTheFish = useFish();
 
@@ -33,3 +35,9 @@ FishList();
 TipList();
 LocationList();
 QuoteList();
+
+let holyFish = mostHolyFish();
+console.log("Test Filters");
+console.log(`Most Holy Fish: \n${holyFish}`);
+console.log(`Solider Fishes: \n${soliderFish()}`);
+console.log(`All Other Fishes: \n${nonHolyFish()}`);
