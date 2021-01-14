@@ -20,6 +20,7 @@ export const FishList = () => {
 
     // Add to the existing HTML in the content element
     contentElement.innerHTML += `
+        <h2>Fish List</h2>
         <article class="fishList">
             ${fishHTMLRepresentations}
         </article>
